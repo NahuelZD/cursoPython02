@@ -1,7 +1,7 @@
 # Importar
 import math
 
-# Definición de funciones
+# Definición de funciones de cálculo
 def volumen(area, h):
     return round(area * h)
 
@@ -20,6 +20,12 @@ def superficie_triangulo(b, h):
 def superficie_cuadrilateros(b, h):
     return round(b * h, 2)
 
+# Entradas
+def valores_radio(cuerpo):
+    print(f"Cuerpo seleccionado -> {cuerpo}")
+    radio = int(input('Ingresá el valor del rádio -> '))
+    print(f"Cuerpo -> {cuerpo} => Rádio -> {radio} cm => Volúmen -> {esfera(radio)} cm3")
+
 # ----------------------------------------------------------------------
 
 # Ingresar la opción del cuerpo que se desea calcular
@@ -33,8 +39,7 @@ start = int(input('Selecciona el número del cuerpo a calcular el volúmen: '))
 # ----------------------------------------------------------------------
 if start in (1, 2, 3, 4, 5, 6):
     if start == 1:
-        radio = int(input('Ingresar el valor del rádio de la esfera: '))
-        print(f"El volúmen de la esfera de radio {radio} cm es: {esfera(radio)} cm3")
+        valores_radio('ESFERA')
     elif start == 2:
         radio = int(input('Ingresar el valor del rádio de la base del cono: '))
         altura = int(input('Ingresar el valor de la altura del cono: '))
