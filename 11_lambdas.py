@@ -10,6 +10,7 @@ print(result)
 result = lambda x : x + 1
 print(result(20))
 
+# .titlle() Primera letra mayúscula
 full_name = lambda name, last_name : f"Full name is -> {name.title()} {last_name.title()}."
 
 text = full_name('nahuel', 'zelaya')
